@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アスペクト比を計算するよ</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/app.css">
+<link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.alphanumeric.pack.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body>
+<div class="row">
+	<h1><a href="index.html">aspect calc.</a></h1>
+	<p>縦か横どちらかの数値を入力すると、<br>もう片方の数値を計算します</p>
+	<ul class="ratio-choice">
+		<li><a href="#aspect4-3" class="current">4:3</a></li>
+		<li><a href="#aspect16-9">16:9</a></li>
+	</ul>
+	<figure class="ratio-display" id="aspect4-3">
+		<img src="http://placehold.jp/383838/ffffff/320x240.png?text=4%3A3">
+		<figcaption>
+			<ul class="ratio-param">
+				<li><input type="text" maxlength="4" id="ratio4" placeholder="4"></li>
+				<li><input type="text" maxlength="4" id="ratio3" placeholder="3"></li>
+			</ul>
+		</figcaption>
+	</figure>
+	<figure class="ratio-display" id="aspect16-9">
+		<img src="http://placehold.jp/383838/ffffff/320x180.png?text=16%3A9">
+		<figcaption>
+			<ul class="ratio-param">
+				<li><input type="text" maxlength="4" id="ratio16" placeholder="16"></li>
+				<li><input type="text" maxlength="4" id="ratio9" placeholder="9"></li>
+			</ul>
+		</figcaption>
+	</figure>
+</div>
+</body>
+</html>

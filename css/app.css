@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/* [ common ] */
+body {
+	color: #fff;
+	line-height: 1.3;
+	font-family: 'ヒラギノ角ゴ ProN W6', 'HiraKakuProN-W6', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	background: #f58e7e;
+	font-size: 16px;
+	text-align: center;
+}
+*,*::before,*::after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a, a:link, a:visited, a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+/* [ h1 ] */
+h1{
+	font-size: 42px;
+	line-height: 1;
+	font-family: 'Codystar', cursive;
+	margin-bottom: 10px;
+}
+p{
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+/* [ row ] */
+.row{
+	width: 320px;
+	margin: 20px auto;
+}
+
+/* [ choice ] */
+.ratio-choice{
+	display: table;
+	width: 100%;
+}
+.ratio-choice li{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+}
+.ratio-choice a{
+	display: block;
+	line-height: 2;
+}
+.ratio-choice a.current{
+	position: relative;
+	background: #fff;
+	color: #f26964;
+}
+.ratio-choice a.current:after{
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fff;
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+/* [ tab ] */
+#aspect16-9{
+	display: none;
+}
+
+/* [ parameter ] */
+.ratio-param{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+}
+.ratio-param li{
+	-webkit-flex: 1 auto;
+	-moz-flex: 1 auto;
+	flex: 1 auto;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	color: #f26964;
+	position: relative;
+}
+.ratio-param li::after{
+	font-size: 9px;
+	line-height: 1;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+#aspect4-3 .ratio-param li:nth-child(1)::after{
+	content: "4";
+}
+#aspect4-3 .ratio-param li:nth-child(2)::after{
+	content: "3";
+}
+#aspect16-9 .ratio-param li:nth-child(1)::after{
+	content: "16";
+}
+#aspect16-9 .ratio-param li:nth-child(2)::after{
+	content: "9";
+}
+.ratio-param input[type="text"]{
+	width: 6em;
+	border: 0;
+	color: #f26964;
+	text-align: center;
+	font-size: 25px;
+	outline: none;
+}
+::-webkit-input-placeholder {
+	color: #ccc;
+}
+:-moz-placeholder {
+	color: #ccc;
+}
